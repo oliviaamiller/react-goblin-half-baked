@@ -1,9 +1,16 @@
 import './App.css';
+import { useState } from 'react';
 import GoblinForm from './GoblinForm';
 import GoblinList from './GoblinList';
 import Goblin from './Goblin';
 
 function App() {
+
+  const [allGoblins, setAllGoblins] = useState([]);
+  const [filteredGoblins, setFilteredGoblins] = useState([]);
+  const [goblinFormName, setGoblinFormName] = useState('');
+  const [goblinFormHP, setGoblinFormHP] = useState(0);
+  const [goblinFormColor, setGoblinFormColor] = useState(0);
   /* 
     track: 
       allGoblins, an array of all goblins
