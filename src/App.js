@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GoblinForm from './GoblinForm';
 import GoblinList from './GoblinList';
 import Goblin from './Goblin';
@@ -11,15 +11,7 @@ function App() {
   const [goblinFormName, setGoblinFormName] = useState('');
   const [goblinFormHP, setGoblinFormHP] = useState(0);
   const [goblinFormColor, setGoblinFormColor] = useState('');
-  /* 
-    track: 
-      allGoblins, an array of all goblins
-      filteredGoblins, a second array of goblins: this one is the filtered version of the above allGoblins array
-      goblinFormName, which is how we track the user input for the current name of the goblin in the form
-      goblinFormHP, which is how we track the user input for the current HP of the goblin in the form
-      goblinFormColor, which is how we track the user input for the current color of the goblin in the form
-*/
-  
+
   function submitGoblin(e) {
     e.preventDefault();
 
@@ -29,7 +21,7 @@ function App() {
       name: goblinFormName,
       hp: goblinFormHP,
       color: goblinFormColor 
-    };
+    }; 
 
 
     // update the allGoblins array. Add the new goblin to the allGoblins array immutably.
