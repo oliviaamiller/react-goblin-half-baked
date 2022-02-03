@@ -9,8 +9,8 @@ function App() {
   const [allGoblins, setAllGoblins] = useState([]);
   const [filteredGoblins, setFilteredGoblins] = useState([]);
   const [goblinFormName, setGoblinFormName] = useState('');
-  const [goblinFormHP, setGoblinFormHP] = useState();
-  const [goblinFormColor, setGoblinFormColor] = useState(0);
+  const [goblinFormHP, setGoblinFormHP] = useState(0);
+  const [goblinFormColor, setGoblinFormColor] = useState('');
   /* 
     track: 
       allGoblins, an array of all goblins
@@ -51,7 +51,6 @@ function App() {
 
   function handleFilterGoblins(search) {
     // use the filter method to get an array of goblins whose name includes this search argument
-
     // if there is a search argument, set the filtered goblins to the filtered goblins
     // if the search argument is undefined, set the filtered goblins in state to just be the array of all goblins
   }
